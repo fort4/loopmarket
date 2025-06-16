@@ -11,6 +11,10 @@
 	<groupId>com.loopmarket</groupId>
 	<artifactId>marketplace</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	
+	<!-- 여기에 추가 -->
+	<packaging>war</packaging>
+	
 	<name>LoopMarket</name>
 	<description>Loopmarket Project</description>
 	<url/>
@@ -135,6 +139,16 @@
 		    <groupId>org.springframework.boot</groupId>
 		    <artifactId>spring-boot-starter-mail</artifactId>
 		</dependency>
+
+		<!-- 배포용 톰캣 디펜던시 추가 -->		
+		<dependency>
+	        <groupId>org.springframework.boot</groupId>
+	        <artifactId>spring-boot-starter-tomcat</artifactId>
+	        <scope>provided</scope>
+	    </dependency>
+
+		
+		
 	</dependencies>
 
 	<build>
