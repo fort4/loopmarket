@@ -28,11 +28,11 @@
 						<div class="mb-3">
 						  <label for="profileImage" class="form-label">프로필 이미지</label>
 						  <div class="d-flex align-items-center gap-3 mt-2">
-						    <img th:if="${profileImagePath != null and profileImagePath != ''}"
-						         th:src="@{${profileImagePath}}"
-						         alt="프로필 이미지"
-						         class="rounded-circle border"
-						         style="width: 80px; height: 80px; object-fit: cover; aspect-ratio: 1 / 1;" />
+							<img th:if="${profileImagePath != null and profileImagePath != ''}"
+							     th:src="@{${profileImagePath}}"
+							     alt="프로필 이미지"
+							     class="rounded-circle border"
+							     style="width: 80px; height: 80px; object-fit: cover; aspect-ratio: 1 / 1;" />
 
 						    <img th:if="${profileImagePath == null or profileImagePath == ''}"
 						         src="/images/default-profile.png"
@@ -81,5 +81,5 @@
 		</div>
 	</div>
 
-	<script src="/static/js/editprofile.js"></script>
+	<script src="/js/editprofile.js"></script>
 </div>

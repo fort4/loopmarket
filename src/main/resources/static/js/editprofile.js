@@ -37,8 +37,8 @@ $(function() {
     reader.onload = function(e) {
       var img = new Image();
       img.onload = function() {
-        if (img.width !== 100 || img.height !== 100) {
-          alert('프로필 이미지는 반드시 100x100 크기여야 합니다.');
+		if (img.width !== 100 || img.height !== 100) {
+		          alert('프로필 이미지는 반드시 100x100 크기여야 합니다.');
           $profileImageInput.val('');
           validImage = false;
         } else {

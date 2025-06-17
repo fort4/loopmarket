@@ -105,6 +105,8 @@ public class ProfileController extends BaseController {
 		if (profileImage != null && !profileImage.isEmpty()) {
 			String savedPath = imageService.uploadProfileImage(member.getUserId().longValue(), profileImage);
 			member.setProfileImgId(savedPath); // S3나 서버 경로
+			memberRepository.save(member);
+			session.setAttribute("loginUser", member);
 		}
 
 		// 2. 일반 정보 업데이트
